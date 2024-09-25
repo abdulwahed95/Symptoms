@@ -1,44 +1,18 @@
-class Symptoms {
-  int? id;
-  String? name;
-  String? username;
-  String? image;
-  String? email;
-  String? phone;
-  String? website;
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-  Symptoms({
-    this.id,
-    this.name,
-    this.image,
-    this.username,
-    this.email,
-    this.phone,
-    this.website,
-  });
+part 'symptoms_model.freezed.dart';
+part 'symptoms_model.g.dart';
 
-  Symptoms.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    name = json['name'];
-    username = json['username'];
-    image = json['image'];
-    email = json['email'];
+@freezed
+class SymptomsModel with _$SymptomsModel {
+  const factory SymptomsModel({
+    required String name,
+    required String description,
+    required int severity,
+    required int timesReported,
+    required DateTime timeReported,
+  }) = _SymptomsModel;
 
-    phone = json['phone'];
-    website = json['website'];
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    data['id'] = id;
-    data['name'] = name;
-    data['username'] = username;
-    data['image'] = image;
-    data['email'] = email;
-
-    data['phone'] = phone;
-    data['website'] = website;
-
-    return data;
-  }
+  factory SymptomsModel.fromJson(Map<String, dynamic> json) =>
+      _$SymptomsModelFromJson(json);
 }

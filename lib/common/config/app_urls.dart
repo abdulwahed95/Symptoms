@@ -7,5 +7,6 @@ class AppUrls {
   // connectTimeout
   static const int connectionTimeout = 60000;
 
-  static const String users = "users";
+  static const String symptoms = "users";
+  static const String symptom = "user";
 }

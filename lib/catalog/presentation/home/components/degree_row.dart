@@ -7,13 +7,13 @@ class DegreeRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return     Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        DegreeItem(title: 'Low', degree:'1', color: AppColors.green),
-        DegreeItem(title: 'Moderate', degree:'3', color: AppColors.yellow),
-        DegreeItem(title: 'High', degree:'4', color: AppColors.lightOrange),
-        DegreeItem(title: 'Extreme', degree:'5', color: AppColors.red),
+        DegreeItem(title: 'Low', degree: '1', color: AppColors.green),
+        DegreeItem(title: 'Moderate', degree: '3', color: AppColors.yellow),
+        DegreeItem(title: 'High', degree: '4', color: AppColors.lightOrange),
+        DegreeItem(title: 'Extreme', degree: '5', color: AppColors.red),
       ],
     );
   }

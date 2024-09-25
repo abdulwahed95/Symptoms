@@ -4,7 +4,7 @@ import 'package:symptoms_statistics/common/config/app_colors.dart';
 import 'package:animate_do/animate_do.dart';
 
 import '../../../../common/widget/custom_rounded_btn.dart';
-import '../state/button_state.dart';
+import '../view_model/button_state.dart';
 
 class SymptomsTap extends ConsumerWidget {
   const SymptomsTap({super.key});

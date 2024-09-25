@@ -9,7 +9,7 @@ class CatalogFacadeService {
 
   final HomeRepository? homeRepository;
 
-  Future<ResponseWrapper<List<Symptoms>>> fetchUsers() async {
-    return homeRepository!.fetchUsers();
+  Future<ResponseWrapper<List<SymptomsModel>>> fetchSymptoms() async {
+    return homeRepository!.fetchSymptoms();
   }
 }

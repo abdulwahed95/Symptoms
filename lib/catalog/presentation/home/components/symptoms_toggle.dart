@@ -35,7 +35,6 @@ class SymptomsToggle extends StatelessWidget {
                         pause: const Duration(milliseconds: 5000),
                         displayFullTextOnTap: true,
                         stopPauseOnTap: true,
-
                       )),
                   Icon(
                     Icons.arrow_drop_down_outlined,

@@ -3,7 +3,6 @@ import 'package:page_transition/page_transition.dart';
 
 import 'catalog/presentation/home/home_page.dart';
 
-
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {

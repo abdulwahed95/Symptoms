@@ -24,10 +24,14 @@ class SymptomsLegenda extends StatelessWidget {
           ),
         ),
         SizedBox(
-            width: MediaQuery.of(context).size.width/5,
-            child: Center(child: Text(title,maxLines: 2,
+            width: MediaQuery.of(context).size.width / 5,
+            child: Center(
+                child: Text(
+              title,
+              maxLines: 2,
               textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 11),)))
+              style: const TextStyle(fontSize: 11),
+            )))
       ],
     );
   }

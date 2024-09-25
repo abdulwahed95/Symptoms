@@ -14,7 +14,7 @@ class SymptomsTotal extends StatelessWidget {
               AppColors.lightGreen.withOpacity(0.3),
               AppColors.lightGreen,
             ],
-              stops: const [0, 0.7],
+            stops: const [0, 0.7],
             end: const Alignment(0.0, -1),
             begin: const Alignment(0.0, 0.6),
           ),

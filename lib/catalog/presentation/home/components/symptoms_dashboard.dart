@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../common/config/app_colors.dart';
-import '../state/drop_down_notifier.dart';
+import '../view_model/drop_down_notifier.dart';
 
 class SymptomsDashboard extends ConsumerWidget {
   const SymptomsDashboard({super.key});
@@ -26,24 +26,20 @@ class SymptomsDashboard extends ConsumerWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               FadeInLeftBig(
-                duration: const Duration(milliseconds: 250),
-                child:
-                AnimatedTextKit(
-                  animatedTexts: [
-                    WavyAnimatedText('Symptoms Dashboard',
-                        speed: const Duration(milliseconds: 140),
-                        textStyle: TextStyle(
-                        fontSize: 20,
-                        height: 0.7,
-                        fontWeight: FontWeight.w600,
-                        color: AppColors.purple)),
-                  ],
-                  isRepeatingAnimation: false,
-                  onTap: () {
-                  },
-                )
-
-              ),
+                  duration: const Duration(milliseconds: 250),
+                  child: AnimatedTextKit(
+                    animatedTexts: [
+                      WavyAnimatedText('Symptoms Dashboard',
+                          speed: const Duration(milliseconds: 140),
+                          textStyle: TextStyle(
+                              fontSize: 20,
+                              height: 0.7,
+                              fontWeight: FontWeight.w600,
+                              color: AppColors.purple)),
+                    ],
+                    isRepeatingAnimation: false,
+                    onTap: () {},
+                  )),
               DropdownButtonHideUnderline(
                 child: DropdownButton2<String>(
                   isExpanded: true,

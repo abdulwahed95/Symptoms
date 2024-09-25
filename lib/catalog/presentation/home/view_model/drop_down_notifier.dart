@@ -8,6 +8,7 @@ class DropdownStateNotifier extends StateNotifier<String?> {
   }
 }
 
-final dropdownStateProvider = StateNotifierProvider<DropdownStateNotifier, String?>(
-      (ref) => DropdownStateNotifier(),
+final dropdownStateProvider =
+    StateNotifierProvider<DropdownStateNotifier, String?>(
+  (ref) => DropdownStateNotifier(),
 );

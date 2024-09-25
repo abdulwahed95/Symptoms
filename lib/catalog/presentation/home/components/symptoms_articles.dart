@@ -17,10 +17,10 @@ class SymptomsArticles extends StatelessWidget {
             animatedTexts: [
               TyperAnimatedText(
                 'Articles about how improve your symptoms:',
-                textStyle:  TextStyle(
+                textStyle: TextStyle(
                     color: AppColors.blackColor,
-                    fontSize: 16,fontWeight: FontWeight.w600
-                ),
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600),
                 speed: const Duration(milliseconds: 55),
               ),
             ],
@@ -29,29 +29,38 @@ class SymptomsArticles extends StatelessWidget {
             displayFullTextOnTap: true,
             stopPauseOnTap: true,
           ),
-
-          SizedBox(height: 110,
-          child: ListView.builder(
-              itemCount: 7,
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (context,index){
-            return Padding(
-              padding: const EdgeInsets.all(4.0),
-              child:  Column(
-                  children: [
-                    ClipRRect(
-                        borderRadius: BorderRadius.circular(8),
-                        child: Image.asset(AppImages.image,width: 60,height: 60,)),
-                   const SizedBox(height: 6,),
-                    const SizedBox(
-                        width:60,
-                        child: Text('improvment sleep',
-                        style: TextStyle(fontSize: 10),textAlign: TextAlign.center,),)
-                  ],
-                ),
-
-            );
-          }),
+          SizedBox(
+            height: 110,
+            child: ListView.builder(
+                itemCount: 7,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.all(4.0),
+                    child: Column(
+                      children: [
+                        ClipRRect(
+                            borderRadius: BorderRadius.circular(8),
+                            child: Image.asset(
+                              AppImages.image,
+                              width: 60,
+                              height: 60,
+                            )),
+                        const SizedBox(
+                          height: 6,
+                        ),
+                        const SizedBox(
+                          width: 60,
+                          child: Text(
+                            'improvment sleep',
+                            style: TextStyle(fontSize: 10),
+                            textAlign: TextAlign.center,
+                          ),
+                        )
+                      ],
+                    ),
+                  );
+                }),
           )
         ],
       ),

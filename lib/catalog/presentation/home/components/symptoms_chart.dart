@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:symptoms_statistics/catalog/presentation/home/components/pie_chart.dart';
 import 'package:symptoms_statistics/common/config/app_colors.dart';
-
 import 'line_chart_widget.dart';
 
 class SymptomsChart extends StatelessWidget {
@@ -10,7 +9,8 @@ class SymptomsChart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsetsDirectional.symmetric(horizontal: 6,vertical: 12),
+      padding:
+          const EdgeInsetsDirectional.symmetric(horizontal: 6, vertical: 12),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

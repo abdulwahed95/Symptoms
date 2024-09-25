@@ -3,8 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:symptoms_statistics/catalog/presentation/home/components/activity_card.dart';
 import 'package:symptoms_statistics/common/config/app_colors.dart';
-
-import '../state/activity_state.dart';
+import '../view_model/activity_state.dart';
 
 class SymptomsActivity extends ConsumerWidget {
   const SymptomsActivity({super.key});

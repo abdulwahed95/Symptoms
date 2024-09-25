@@ -3,6 +3,7 @@ import 'catalog/application/catalog_facade_service.dart';
 import 'catalog/infrastructure/data_source/home/home_local_data_provider.dart';
 import 'catalog/infrastructure/data_source/home/home_remote_data_provider.dart';
 import 'catalog/infrastructure/repositories/home_repository.dart';
+import 'catalog/presentation/home/view_model/symptoms_state.dart';
 import 'catalog/services/network.dart';
 
 final serviceLocator = GetIt.instance;
@@ -37,7 +38,11 @@ Future<void> catalogDependencies() async {
       dio: serviceLocator(),
     ),
   );
-  // Presentation Layer - Riverpode
+
+  // view-model
+  serviceLocator.registerLazySingleton(
+    () => SymptomsViewModel(catalogFacadeService: serviceLocator()),
+  );
 
   // Common and core
   serviceLocator.registerLazySingleton(

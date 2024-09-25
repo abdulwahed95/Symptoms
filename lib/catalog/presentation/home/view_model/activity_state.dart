@@ -1,8 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class ActivityStateNotifier extends StateNotifier<List<bool>> {
-  ActivityStateNotifier()
-      : super(List.filled(4, false));
+  ActivityStateNotifier() : super(List.filled(4, false));
 
   void toggleActivity(int index) {
     state = [

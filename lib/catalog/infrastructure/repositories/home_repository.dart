@@ -17,35 +17,50 @@ class HomeRepository implements HomeInterface {
   final HomeRemoteDataProvider homeRemoteDataProvider;
 
   @override
-  Future<ResponseWrapper<List<Symptoms>>> fetchUsers() async {
+  Future<ResponseWrapper<List<SymptomsModel>>> fetchSymptoms() async {
     try {
-      Response response = await homeRemoteDataProvider.fetchUsers();
+      Response response = await homeRemoteDataProvider.fetchSymptoms();
       try {
         if (response.statusCode == 200) {
-          var res = ResponseWrapper<List<Symptoms>>();
+          var res = ResponseWrapper<List<SymptomsModel>>();
           res.responseType = res_type.ResponseType.SUCCESS;
+          List<SymptomsModel> symptoms = [
+            SymptomsModel(
+                name: 'Headache',
+                description: 'A severe headache',
+                severity: 3,
+                timesReported: 5,
+                timeReported: DateTime.now()),
+            SymptomsModel(
+                name: 'Fever',
+                description: 'High temperature',
+                severity: 4,
+                timesReported: 10,
+                timeReported: DateTime.now()),
+          ];
+          res.data = symptoms;
           return res;
         } else {
-          var res = ResponseWrapper<List<Symptoms>>();
+          var res = ResponseWrapper<List<SymptomsModel>>();
           return res;
         }
       } on DioException catch (e) {
         if (e.response!.statusCode == 200) {
-          var res = ResponseWrapper<List<Symptoms>>();
+          var res = ResponseWrapper<List<SymptomsModel>>();
           res.responseType = res_type.ResponseType.SERVER_ERROR;
           return res;
         } else {
-          var res = ResponseWrapper<List<Symptoms>>();
+          var res = ResponseWrapper<List<SymptomsModel>>();
           res.responseType = res_type.ResponseType.SERVER_ERROR;
           return res;
         }
       } catch (e) {
-        var res = ResponseWrapper<List<Symptoms>>();
+        var res = ResponseWrapper<List<SymptomsModel>>();
         res.responseType = res_type.ResponseType.CLIENT_ERROR;
         return res;
       }
     } catch (e) {
-      var res = ResponseWrapper<List<Symptoms>>();
+      var res = ResponseWrapper<List<SymptomsModel>>();
       res.responseType = res_type.ResponseType.CLIENT_ERROR;
       return res;
     }

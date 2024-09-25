@@ -10,6 +10,7 @@ class ButtonStateNotifier extends StateNotifier<ButtonType> {
   }
 }
 
-final buttonStateProvider = StateNotifierProvider<ButtonStateNotifier, ButtonType>(
-      (ref) => ButtonStateNotifier(),
+final buttonStateProvider =
+    StateNotifierProvider<ButtonStateNotifier, ButtonType>(
+  (ref) => ButtonStateNotifier(),
 );

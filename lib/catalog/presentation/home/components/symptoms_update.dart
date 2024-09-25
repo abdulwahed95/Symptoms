@@ -10,8 +10,8 @@ class SymptomsUpdate extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding:
-               const EdgeInsetsDirectional.symmetric(horizontal: 32, vertical: 8),
+          padding: const EdgeInsetsDirectional.symmetric(
+              horizontal: 32, vertical: 8),
           child: Column(
             children: [
               Container(
@@ -31,7 +31,9 @@ class SymptomsUpdate extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 24,),
+              const SizedBox(
+                height: 24,
+              ),
               CustomRoundedButton(
                 text: 'Symptoms managment tool',
                 textColor: Colors.white,
@@ -42,7 +44,6 @@ class SymptomsUpdate extends StatelessWidget {
             ],
           ),
         ),
-
       ],
     );
   }
